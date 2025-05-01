@@ -7,7 +7,7 @@ import os
 app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
 
-client = OpenAI(api_key="OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Расширенные промпты: 6 вариантов (школа и университет по 3 уровня сложности)
 prompt_templates = {
