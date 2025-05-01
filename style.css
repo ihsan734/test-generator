@@ -1,0 +1,439 @@
+/* Общие настройки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Section */
+#hero-section {
+    width: 100%;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.hero-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.hero-features li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333333;
+}
+
+.hero-text button {
+    background-color: #6b4dc4;
+    color: white;
+    padding: 14px 32px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: #6b4dc4;
+}
+
+.hero-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+/* Контейнеры страниц */
+#home-page, #settings-page, #test-page, #result-page {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Обычный текст */
+p, label {
+    color: #555555;
+    font-size: 16px;
+}
+
+/* Кнопки */
+button {
+    background-color: #6b4dc4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px 4px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6b4dc4;
+}
+
+/* Кнопки выбора предмета и темы */
+#subject-options, #theme-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#subject-options button, #theme-options button {
+    background-color: #007BFF;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+#subject-options button:hover, #theme-options button:hover {
+    background-color: #0069d9;
+}
+
+/* Поля ввода и селекты */
+input[type="text"], select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Кнопки submit отдельно */
+button[type="submit"], button[type="button"] {
+    margin-top: 20px;
+}
+
+/* Блок Как работает генератор тестов (обновленный красивый дизайн) */
+#how-it-works {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #f4f7fa;
+    box-sizing: border-box;
+}
+
+.works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.works-container h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.works-description {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 50px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+.works-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f3ff, #f3e8ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.works-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-left {
+    flex: 0 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-badge {
+    width: 45px;
+    height: 45px;
+    background-color: #6b4dc4;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-center {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.card-center h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.card-center p {
+    font-size: 16px;
+    color: #555555;
+}
+
+.card-right {
+    flex: 0 0 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-text button {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works-card {
+        max-width: 90%;
+    }
+}
+
+/* Блок О проекте и Обо мне */
+#about-project {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #f9f9fc;
+    box-sizing: border-box;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1 1 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #6b4dc4;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.about-text ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-text ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.about-author {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.author-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.about-author h3 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.about-author p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text, .about-author {
+        flex: 1 1 100%;
+    }
+
+    .author-photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+footer {
+    background-color: #f4f7fa;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    border-top: 1px solid #ddd;
+    margin-top: 80px;
+  }
+  
+  footer h3 {
+    font-size: 24px;
+    color: #6b4dc4;
+    margin-bottom: 15px;
+  }
+  
+  footer p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  footer ul li {
+    font-size: 15px;
+    color: #555;
+    margin: 6px 0;
+  }
+  
+  footer small {
+    display: block;
+    color: #999;
+    font-size: 13px;
+  }
+  

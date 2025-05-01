@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор тестов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Hero Section (главная красивая обложка) -->
+  <section id="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Создавайте тесты быстро и легко с помощью ИИ!</h1>
+        <p>Персонализированные тесты для школы и университета за несколько минут. Используйте силу искусственного интеллекта для эффективной подготовки!</p>
+        <ul class="hero-features">
+          <li>📚 Создание теста за 2 минуты</li>
+          <li>🧠 Полная адаптация под ваш предмет</li>
+          <li>🚀 Мгновенный результат</li>
+        </ul>
+        <button onclick="scrollToSettings()">Начать создание теста</button>
+      </div>
+      <div class="hero-image">
+        <img src="C:/Users/Ихсан/Desktop/Генрация тест/images/Девушка.png" alt="Девушка генератор тестов">
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок Как работает Генератор тестов -->
+  <section id="how-it-works">
+    <div class="works-container">
+      <h2>С НАМИ ВЫ СОЗДАЁТЕ ТЕСТЫ ЛЕГКО И БЫСТРО!</h2>
+
+      <div class="works-grid">
+        <div class="works-card">
+          <div class="card-left"><div class="number-badge">1</div></div>
+          <div class="card-center">
+            <h3>Выберите уровень образования</h3>
+            <p>Школа или университет? Определите основу для вашего теста.</p>
+          </div>
+          <div class="card-right"><div class="icon-placeholder"></div></div>
+        </div>
+
+        <div class="works-card">
+          <div class="card-left"><div class="number-badge">2</div></div>
+          <div class="card-center">
+            <h3>Укажите предмет и тему</h3>
+            <p>Выберите предмет из списка или введите свою тему для максимальной точности.</p>
+          </div>
+          <div class="card-right"><div class="icon-placeholder"></div></div>
+        </div>
+
+        <div class="works-card">
+          <div class="card-left"><div class="number-badge">3</div></div>
+          <div class="card-center">
+            <h3>Настройте параметры теста</h3>
+            <p>Выберите сложность, количество вопросов и формат отображения ответов.</p>
+          </div>
+          <div class="card-right"><div class="icon-placeholder"></div></div>
+        </div>
+
+        <div class="works-card">
+          <div class="card-left"><div class="number-badge">4</div></div>
+          <div class="card-center">
+            <h3>Получите готовый тест!</h3>
+            <p>Мгновенная генерация теста с возможностью пройти его сразу или скачать.</p>
+          </div>
+          <div class="card-right"><div class="icon-placeholder"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок О проекте и Обо мне -->
+  <section id="about-project">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>О проекте</h2>
+        <p><strong>Генератор тестов на базе ИИ</strong> — это онлайн-платформа, которая позволяет быстро и удобно создавать индивидуальные тесты для школьников и студентов.</p>
+        <ul>
+          <li>📚 Упрощение подготовки к экзаменам и контрольным;</li>
+          <li>⚡ Мгновенная генерация тестов любой сложности;</li>
+          <li>🎯 Адаптация под любые предметы и темы;</li>
+          <li>🚀 Масштабирование: курсы, персональные рекомендации, сертификаты в будущем.</li>
+        </ul>
+        <p>Цель проекта — сделать подготовку к экзаменам доступной, эффективной и современной.</p>
+      </div>
+
+      <div class="about-author">
+        <img src="C:/Users/Ихсан/Desktop/Генрация тест/images/5222434547378025041.jpg" alt="Фото Ихсана" class="author-photo">
+        <h3>Ихсан</h3>
+        <p>Создатель Генератора тестов</p>
+        <p>Я студент, увлечённый технологиями и образованием. Моя цель — сделать обучение проще и эффективнее с помощью искусственного интеллекта.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок главной страницы -->
+  <div id="home-page" style="display:none;">
+    <h1>Добро пожаловать в Генератор тестов!</h1>
+    <p>Этот сервис поможет вам создать уникальные тесты на основе выбранных предметов и тем, используя искусственный интеллект.</p>
+    <button onclick="goToSettings()">Начать</button>
+  </div>
+
+  <!-- Блок настроек теста -->
+  <div id="settings-page" style="display:none;">
+    <h2>Настройки теста</h2>
+
+    <!-- Шаги настройки -->
+    <div id="step-education">
+      <h3>Шаг 1: Выберите уровень образования</h3>
+      <button onclick="selectEducation('school')">Школа</button>
+      <button onclick="selectEducation('university')">Университет</button>
+    </div>
+
+    <div id="step-subject" style="display:none;">
+      <h3 id="subject-label">Шаг 2: Выберите предмет или специальность</h3>
+      <div id="subject-options"></div>
+      <input type="text" id="custom-subject" placeholder="Или введите свой предмет">
+      <button onclick="confirmSubject()">Продолжить</button>
+      <button onclick="goBackToEducation()">Назад</button>
+    </div>
+
+    <div id="step-topic" style="display:none;">
+      <h3>Шаг 3: Выберите тему или введите свою</h3>
+      <div id="theme-options"></div>
+      <input type="text" id="topic" placeholder="Введите свою тему">
+      <button onclick="confirmTopic()">Продолжить</button>
+      <button onclick="goBackToSubject()">Назад</button>
+    </div>
+
+    <div id="step-settings" style="display:none;">
+      <h3>Шаг 4: Настройте параметры теста</h3>
+      <label for="difficulty">Сложность теста:</label><br>
+      <select id="difficulty">
+        <option value="easy">Легкий</option>
+        <option value="medium">Средний</option>
+        <option value="hard">Сложный</option>
+      </select><br><br>
+
+      <label for="question-count">Количество вопросов:</label><br>
+      <select id="question-count">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+      </select><br><br>
+
+      <label for="answer-options">Возможные варианты:</label><br>
+      <select id="answer-options">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select><br><br>
+
+      <label for="show-answers">Когда показывать правильные ответы:</label><br>
+      <select id="show-answers">
+        <option value="immediate">Сразу после вопроса</option>
+        <option value="after-test">После теста</option>
+      </select><br><br>
+
+      <button onclick="generateTest()">Создать тест</button>
+      <button onclick="goBackToTopic()">Назад</button>
+    </div>
+  </div>
+
+  <!-- Блок прохождения теста -->
+  <div id="test-page" style="display:none;">
+    <h2>Ваш тест</h2>
+    <div id="test-container"></div>
+    <button onclick="submitTest()">Завершить тест</button>
+  </div>
+
+  <!-- Блок результатов -->
+  <div id="result-page" style="display:none;">
+    <h2>Результаты теста</h2>
+    <p id="score"></p>
+    <button onclick="restart()">Создать новый тест</button>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    function goBackToEducation() {
+      document.getElementById('step-subject').style.display = 'none';
+      document.getElementById('step-education').style.display = 'block';
+    }
+
+    function goBackToSubject() {
+      document.getElementById('step-topic').style.display = 'none';
+      document.getElementById('step-subject').style.display = 'block';
+    }
+
+    function goBackToTopic() {
+      document.getElementById('step-settings').style.display = 'none';
+      document.getElementById('step-topic').style.display = 'block';
+    }
+  </script>
+
+<!-- Дисклеймер -->
+<footer style="background-color:#f8f9fa; padding: 25px; text-align: center; font-size: 14px; color: #666; border-top: 1px solid #ddd;">
+  <p><strong>⚠️ Внимание:</strong> Этот сайт является MVP-версией (Minimum Viable Product). Некоторые функции находятся в стадии разработки, возможны технические ошибки.</p>
+
+  <p>В будущем планируется добавить:</p>
+  <ul style="list-style: none; padding: 0; margin: 10px 0;">
+    <li>✅ Генерация тестов на основе загруженных вами файлов (PDF, DOCX, PPTX и др.)</li>
+    <li>✅ Экспорт тестов в формат PDF</li>
+    <li>✅ Хранение истории тестов и создание аккаунтов</li>
+    <li>✅ Отдельный интерфейс для преподавателей</li>
+  </ul>
+
+  <p>Все права защищены © 2025. Автор проекта — Ихсан. Запрещено копирование и распространение материалов без письменного согласия.</p>
+</footer>
+
+
+</body>
+</html>
