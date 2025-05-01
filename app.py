@@ -3,7 +3,8 @@ from flask_cors import CORS
 from openai import OpenAI
 import os
 
-app = Flask(__name__)
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
 
 client = OpenAI(api_key="OPENAI_API_KEY")
@@ -106,7 +107,7 @@ def generate_test():
 
 @app.route('/')
 def home():
-    return "✅ Сервер работает. Используй POST-запрос на /generate-test"
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
