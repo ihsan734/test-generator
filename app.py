@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key="OPENAI_API_KEY")
 
 # Расширенные промпты: 6 вариантов (школа и университет по 3 уровня сложности)
 prompt_templates = {
@@ -103,6 +103,10 @@ def generate_test():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/')
+def home():
+    return "✅ Сервер работает. Используй POST-запрос на /generate-test"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
